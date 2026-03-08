@@ -1,0 +1,262 @@
+/* ===================== Global Styles ===================== */
+body {
+  background-color: #0f172a;
+  color: #e5e7eb;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: gold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #ffffff;
+}
+
+h2, h3, h4 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+/* ===================== App Container ===================== */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #0f172a;
+}
+
+.main-content {
+  margin-left: 300px;
+  padding: 20px;
+  margin-top: 60px;
+  flex: 1;
+  box-sizing: border-box;
+}
+
+/* ===================== Header ===================== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #111827;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 1000;
+  border-bottom: 1px solid #1f2937;
+}
+
+.logo-img {
+  height: 40px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: gold;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: gold;
+}
+
+/* Dropdown */
+.dropdown {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: #111827;
+  border-radius: 10px;
+  border: 1px solid #1f2937;
+  padding: 10px 0;
+}
+
+.dropdown.open {
+  display: flex;
+}
+
+.dropdown a {
+  color: #e5e7eb;
+  padding: 10px 20px;
+}
+
+.dropdown a:hover {
+  background-color: #1f2937;
+  color: gold;
+}
+
+/* ===================== Sidebar ===================== */
+.sidebar {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 300px;
+  height: calc(100% - 60px);
+  background-color: #111827;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  overflow-y: auto;
+  border-right: 1px solid #1f2937;
+}
+
+.sidebar .profile-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 3px solid gold;
+}
+
+.sidebar h3 {
+  color: gold;
+  margin: 5px 0;
+}
+
+.sidebar p {
+  font-size: 1rem;
+  color: #9ca3af;
+}
+
+.sidebar .links a {
+  display: block;
+  margin: 5px 0;
+  color: #e5e7eb;
+}
+
+.sidebar .links a:hover {
+  color: gold;
+}
+
+/* ===================== Experience Section ===================== */
+.experience {
+  padding: 0px 10%;
+  background: #0f172a;
+  color: white;
+}
+
+.experience h2 {
+  text-align: center;
+  color: gold;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.experience-section {
+  background: #111827;
+  padding: 18px 20px;
+  border-radius: 14px;
+  margin: 15px auto;
+  max-width: 900px;
+  border: 1px solid #1f2937;
+  transition: 0.3s;
+}
+
+.experience-section:hover {
+  transform: translateY(-5px);
+  border-color: gold;
+}
+
+.experience-section h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.experience-section h3 span {
+  color: gold;
+}
+
+.experience-section ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #9ca3af;
+}
+
+.experience-section ul li {
+  padding: 6px 0;
+  border-bottom: 1px solid #1f2937;
+}
+
+.experience-section ul li:last-child {
+  border-bottom: none;
+}
+
+/* ===================== Language & Framework Icons ===================== */
+.language-header,
+.framework-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+.language-header img,
+.framework-header img {
+  width: 28px;
+  height: 28px;
+}
+
+/* ===================== Responsive ===================== */
+@media (max-width: 1000px) {
+  .main-content {
+    margin-left: 0;
+    margin-top: 120px;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+  }
+
+  .sidebar .profile-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .experience {
+    padding: 60px 20px;
+  }
+}

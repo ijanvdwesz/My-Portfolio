@@ -1,0 +1,58 @@
+/* About Section Container */
+.about {
+  padding: 80px 10%;
+  background: #0f172a; /* same background as skills & projects */
+  color: white;
+  text-align: center;
+}
+
+/* About Card */
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #111827; /* same card color */
+  border-radius: 14px;
+  padding: 40px;
+  border: 1px solid #1f2937;
+  transition: 0.3s;
+}
+
+/* Hover effect similar to other cards */
+.about-container:hover {
+  transform: translateY(-5px);
+  border-color: gold;
+}
+
+/* Heading */
+.about h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: gold;
+}
+
+/* Paragraph */
+.about p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #9ca3af;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Subtle highlight on first letter */
+.about p::first-letter {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: gold;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .about {
+    padding: 60px 20px;
+  }
+
+  .about-container {
+    padding: 25px;
+  }
+}

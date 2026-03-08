@@ -1,0 +1,73 @@
+/* Only keep structural styling — App.css controls the theme */
+
+/* Experience items inside the card */
+.experience-section {
+  background-color: #222;
+  padding: 16px 20px;
+  border-radius: 10px;
+  margin: 12px 0;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: 1px solid rgba(50, 205, 50, 0.15);
+}
+
+/* Hover effect */
+.experience-section:hover {
+  transform: translateY(-3px);
+  background-color: #1f1f1f;
+  border-color: #32CD32;
+}
+
+/* Header row */
+.experience-section h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.15rem;
+  margin: 0;
+}
+
+/* Arrow indicator */
+.experience-section h3 span {
+  color: #32CD32;
+  font-size: 0.9rem;
+}
+
+/* Job title / project title */
+.experience-section h4 {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #32CD32;
+}
+
+/* Description list */
+.experience-section ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.experience-section ul li {
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(50, 205, 50, 0.2);
+}
+
+.experience-section ul li:last-child {
+  border-bottom: none;
+}
+
+/* Icon headers (languages/frameworks) */
+.language-header,
+.framework-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.language-icon,
+.framework-icon {
+  width: 26px;
+  height: 26px;
+}
