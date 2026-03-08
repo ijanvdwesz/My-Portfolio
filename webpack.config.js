@@ -10,29 +10,22 @@ module.exports = (env, argv) => {
     entry: './src/index.js',
     output: {
       path: path.resolve(__dirname, 'dist'),
-      filename: 'bundle.[contenthash].js', // hashed filename for production cache busting
-      publicPath: '/', // works for both dev and production
-      clean: true, // cleans dist folder on each build
+      filename: 'bundle.[contenthash].js',
+      publicPath: '/', 
+      clean: true,
     },
     devServer: {
       static: [
         { directory: path.join(__dirname, 'dist') },
-        { directory: path.join(__dirname, 'public') }, // serve public files in dev (PDF, images)
+        { directory: path.join(__dirname, 'public') },
       ],
       port: 3000,
       open: true,
       hot: true,
-      historyApiFallback: true, // SPA routing support
+      historyApiFallback: true,
     },
     module: {
       rules: [
-        {
-          test: /\.(png|jpg|jpeg|gif|svg)$/i,
-          type: 'asset/resource',
-          generator: {
-            filename: 'images/[hash][ext][query]',
-          },
-        },
         {
           test: /\.(js|jsx)$/,
           exclude: /node_modules/,
@@ -43,10 +36,17 @@ module.exports = (env, argv) => {
           use: ['style-loader', 'css-loader'],
         },
         {
-          test: /\.(pdf|txt)$/i, // include PDF as asset if needed
+          test: /\.(png|jpg|jpeg|gif|svg|webp)$/i,
           type: 'asset/resource',
           generator: {
-            filename: '[name][ext]', // keep original filename
+            filename: 'images/[name][ext]',
+          },
+        },
+        {
+          test: /\.(pdf)$/i,
+          type: 'asset/resource',
+          generator: {
+            filename: '[name][ext]',
           },
         },
       ],
@@ -62,9 +62,9 @@ module.exports = (env, argv) => {
         patterns: [
           {
             from: 'public',
-            to: '', // copy everything to dist root
+            to: '',
             globOptions: {
-              ignore: ['**/index.html'], // don't overwrite the HTML
+              ignore: ['**/index.html'], 
             },
           },
         ],
@@ -72,9 +72,9 @@ module.exports = (env, argv) => {
     ],
     optimization: {
       splitChunks: {
-        chunks: 'all', // better production bundling
+        chunks: 'all',
       },
     },
-    devtool: isProd ? false : 'source-map', // dev tool for debugging
+    devtool: isProd ? false : 'source-map',
   };
 };

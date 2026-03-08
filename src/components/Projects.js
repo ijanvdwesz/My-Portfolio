@@ -5,7 +5,7 @@ const projects = [
   {
     title: "ACSystems4u Service & Product Platform",
     description: "Responsive service & product platform built with MERN stack.",
-    image: "images/project-acsystems4u.png",
+    image: "/images/project-acsystems4u.png", // absolute path
     liveLink: "https://acsystems4u.com/",
     githubLink: "https://github.com/ijanvdwesz/acsystems4u",
     tech: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
@@ -14,7 +14,7 @@ const projects = [
     title: "Salon Booking App",
     description:
       "Real-time booking system with admin dashboard and automated email notifications.",
-    image: "images/project-salon.png",
+    image: "/images/project-salon.png", // absolute path
     liveLink: "https://salon-booking-app-henna.vercel.app/",
     githubLink: "https://github.com/ijanvdwesz/salon-booking-app",
     tech: ["React", "Node.js", "MongoDB", "Express.js", "Vercel"],
@@ -23,7 +23,7 @@ const projects = [
     title: "Ticket Sales Web Application",
     description:
       "Event ticketing platform with booking workflow and backend inventory management.",
-    image: "images/project-ticket.png",
+    image: "/images/project-ticket.png", // absolute path
     liveLink:
       "https://ticket-sales-front-git-e2a741-ijan-van-der-westhuizens-projects.vercel.app/",
     githubLink: "https://github.com/ijanvdwesz/ticket-sales-app",
@@ -33,7 +33,7 @@ const projects = [
     title: "Credential Management System",
     description:
       "Secure authentication system with role-based dashboards and credential storage.",
-    image: "images/project-credential.png",
+    image: "/images/project-credential.png", // absolute path
     liveLink: "https://credential-management-plum.vercel.app/",
     githubLink: "https://github.com/ijanvdwesz/credential-management",
     tech: ["React", "Node.js", "MongoDB", "JWT"],
@@ -63,10 +63,18 @@ const Projects = () => {
                 ))}
               </div>
               <div className="project-links">
-                <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
+                <a
+                  href={project.liveLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Live
                 </a>
-                <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
+                <a
+                  href={project.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   GitHub
                 </a>
               </div>

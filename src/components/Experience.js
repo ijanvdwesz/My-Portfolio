@@ -16,10 +16,10 @@ const Experience = () => {
       <div className="job">
         <h3 onClick={() => toggleJob("sprosens")}>
           Technician — Sprosens (2023 – Present)
-          <span>{expandedJob === "sprosens" ? " ▲" : " ▼"}</span>
+          <span>{expandedJob === "sperosens" ? " ▲" : " ▼"}</span>
         </h3>
 
-        {expandedJob === "sprosens" && (
+        {expandedJob === "sperosens" && (
           <ul>
             <li>Installed telemetry and fire detection systems</li>
             <li>Configured fire suppression and safety monitoring systems</li>
